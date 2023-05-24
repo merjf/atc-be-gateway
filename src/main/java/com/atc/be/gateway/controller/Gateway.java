@@ -1,13 +1,15 @@
 package com.atc.be.gateway.controller;
 
 import com.atc.be.gateway.response.CarDetectionDatasetInfoResponse;
+import com.atc.be.gateway.response.CarDetectionTestCarModelResponse;
 import com.atc.be.gateway.service.CarDetectionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,6 +21,15 @@ public class Gateway {
     @GetMapping(path = "/car-dataset-info")
     public ResponseEntity<CarDetectionDatasetInfoResponse> getCarDetectionDatasetInfo() {
         ResponseEntity<CarDetectionDatasetInfoResponse> response = carDetectionService.getDatasetInfo();
+        if(response.getBody() != null){
+            return ResponseEntity.ok(response.getBody());
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @PostMapping(path = "/test-car-model")
+    public ResponseEntity<CarDetectionTestCarModelResponse> testCar(@RequestBody() MultipartFile image) {
+        ResponseEntity<CarDetectionTestCarModelResponse> response = carDetectionService.testCarModel(image);
         if(response.getBody() != null){
             return ResponseEntity.ok(response.getBody());
         }

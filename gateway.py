@@ -1,14 +1,3 @@
-import os
-import numpy as np
-from PIL import Image
-import requests
-from flask import Flask, jsonify, request, flash, redirect
-from flask_cors import CORS
-import util
-
-app = Flask("__main__")
-CORS(app, expose_headers='Authorization')
-
 @app.route("/test-car-model", methods=['POST'])
 def uploadImage():
     if request.method == 'POST':
@@ -38,16 +27,3 @@ def uploadImage():
         'code': 500
     }
     return jsonify(response)
-
-@app.route("/car-dataset-info", methods=['GET'])
-def getCarDatasetInfo():
-    response = {
-        'accuracy': 10,
-        'class': 'className',
-        'message': 200
-    }
-    return jsonify(response)
-
-if __name__ == "__main__":
-    app.secret_key = os.urandom(24)
-    app.run(debug=True, host=util.IP, port=util.GATEWAY_PORT, use_reloader=False)
