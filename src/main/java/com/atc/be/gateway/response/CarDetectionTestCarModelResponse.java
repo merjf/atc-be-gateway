@@ -4,5 +4,7 @@ import lombok.Data;
 
 @Data
 public class CarDetectionTestCarModelResponse {
-    public Integer[] predictions;
+    public Float predictions;
+    public String classes;
+    public String message;
 }

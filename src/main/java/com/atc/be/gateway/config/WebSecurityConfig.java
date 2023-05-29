@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowedOrigins("http://localhost:5001", "http://localhost:5002");
+                .allowedOrigins("http://localhost:5001", "http://localhost:5002","http://localhost:5003");
         WebMvcConfigurer.super.addCorsMappings(registry);
     }
 }

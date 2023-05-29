@@ -28,7 +28,7 @@ public class Gateway {
     }
 
     @PostMapping(path = "/test-car-model")
-    public ResponseEntity<CarDetectionTestCarModelResponse> testCar(@RequestBody() MultipartFile image) {
+    public ResponseEntity<CarDetectionTestCarModelResponse> testCar(@RequestBody() MultipartFile image) throws IOException {
         ResponseEntity<CarDetectionTestCarModelResponse> response = carDetectionService.testCarModel(image);
         if(response.getBody() != null){
             return ResponseEntity.ok(response.getBody());
