@@ -2,9 +2,17 @@ package com.atc.be.gateway.response;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class CarDetectionTestCarModelResponse {
-    public Float predictions;
-    public String classes;
+
+    public List<CarDetectionPrediction> predictions;
     public String message;
+
+    @Data
+    static class CarDetectionPrediction{
+        public Float accuracy;
+        public String model;
+    }
 }
