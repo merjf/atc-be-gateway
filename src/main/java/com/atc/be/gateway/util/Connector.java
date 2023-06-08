@@ -30,8 +30,6 @@ public class Connector {
     public ResponseEntity<String> connectPostFile(String serviceURL, String serviceEndpoint, MultipartFile file) throws IOException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-//        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
-//        body.add("file", file);
         MultiValueMap<String, String> fileMap = new LinkedMultiValueMap<>();
         ContentDisposition contentDisposition = ContentDisposition
                 .builder("form-data")

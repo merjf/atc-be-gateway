@@ -1,8 +1,8 @@
 package com.atc.be.gateway.controller;
 
-import com.atc.be.gateway.response.CarDetectionDatasetInfoResponse;
-import com.atc.be.gateway.response.CarDetectionTestCarModelResponse;
-import com.atc.be.gateway.service.CarDetectionService;
+import com.atc.be.gateway.response.ObjectDetectionLoadDatasetResponse;
+import com.atc.be.gateway.response.ObjectDetectionTestModelResponse;
+import com.atc.be.gateway.service.ObjectDetectionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,20 +16,20 @@ import java.io.IOException;
 @RequestMapping(path = "atc")
 public class Gateway {
 
-    private final CarDetectionService carDetectionService;
+    private final ObjectDetectionService objectDetectionService;
 
-    @GetMapping(path = "/car-dataset-info")
-    public ResponseEntity<CarDetectionDatasetInfoResponse> getCarDetectionDatasetInfo() {
-        ResponseEntity<CarDetectionDatasetInfoResponse> response = carDetectionService.getDatasetInfo();
+    @GetMapping(path = "/load-dataset")
+    public ResponseEntity<ObjectDetectionLoadDatasetResponse> getLoadDatasetObjectDetection(@RequestParam("dataset") String dataset ) {
+        ResponseEntity<ObjectDetectionLoadDatasetResponse> response = objectDetectionService.loadDataset(dataset);
         if(response.getBody() != null){
             return ResponseEntity.ok(response.getBody());
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @PostMapping(path = "/test-car-model")
-    public ResponseEntity<CarDetectionTestCarModelResponse> testCar(@RequestBody() MultipartFile image) throws IOException {
-        ResponseEntity<CarDetectionTestCarModelResponse> response = carDetectionService.testCarModel(image);
+    @PostMapping(path = "/test-object-model")
+    public ResponseEntity<ObjectDetectionTestModelResponse> testModelObjectDetection(@RequestBody() MultipartFile image) throws IOException {
+        ResponseEntity<ObjectDetectionTestModelResponse> response = objectDetectionService.testModel(image);
         if(response.getBody() != null){
             return ResponseEntity.ok(response.getBody());
         }

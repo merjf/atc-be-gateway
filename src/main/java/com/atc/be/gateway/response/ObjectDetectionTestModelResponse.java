@@ -5,13 +5,13 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class CarDetectionTestCarModelResponse {
+public class ObjectDetectionTestModelResponse {
 
-    public List<CarDetectionPrediction> predictions;
+    public List<ObjectDetectionPrediction> predictions;
     public String message;
 
     @Data
-    static class CarDetectionPrediction{
+    static class ObjectDetectionPrediction {
         public Float accuracy;
         public String model;
     }
