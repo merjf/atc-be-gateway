@@ -8,7 +8,7 @@
 		<version>2.5.4</version>
 		<relativePath/>
 	</parent>
-	<groupId>com.atc</groupId>
+	<groupId>com.atc.be</groupId>
 	<artifactId>atc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>atc-be-gateway</name>

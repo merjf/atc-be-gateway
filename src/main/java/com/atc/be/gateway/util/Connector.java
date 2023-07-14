@@ -27,6 +27,15 @@ public class Connector {
                 reponseClass);
     }
 
+    public ResponseEntity<String> connectPost(String serviceURL, String serviceEndpoint) {
+        HttpHeaders headers = new HttpHeaders();
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
+        return restTemplate.postForEntity(serviceURL + serviceEndpoint,
+                requestEntity,
+                String.class);
+    }
+
     public ResponseEntity<String> connectPostFile(String serviceURL, String serviceEndpoint, MultipartFile file) throws IOException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
