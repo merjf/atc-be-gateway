@@ -1,6 +1,2 @@
 server:
   port: 5001
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false

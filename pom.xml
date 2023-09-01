@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.4</version>
+		<version>2.6.0-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 	<groupId>com.atc.be</groupId>
@@ -15,12 +15,21 @@
 	<description>ATC BE Gateway</description>
 	<properties>
 		<java.version>11</java.version>
-		<spring-cloud.version>2022.0.4</spring-cloud.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -29,6 +38,13 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>2.6.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
