@@ -1,0 +1,17 @@
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/DeckResponse.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/AtcBeGatewayApplication.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/Response.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/DeckCardExtractedResponse.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/model/Dataset.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/util/Connector.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/controller/Gateway.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/model/Value.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/ObjectDetectionTestModelResponse.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/config/WebSecurityConfig.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/DashboardDataResponse.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/ObjectDetectionLoadDatasetResponse.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/DashboardLoadDataResponse.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/service/ObjectDetectionService.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/response/model/Prediction.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/service/DashboardService.java
+/Users/merjf/Documents/Projects/accademic-tools-collector/atc-be-gateway/src/main/java/com/atc/be/gateway/service/MonteCarloSimulationService.java
