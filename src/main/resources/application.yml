@@ -5,6 +5,15 @@ spring:
     name: ATC-BE-GATEWAY-SERVICE
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
       routes:
         - id: ATC-BE-MONTECARLO
           uri: http://localhost:5002
